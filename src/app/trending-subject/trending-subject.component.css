@@ -1,0 +1,17 @@
+.Trending_subjects {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: rgb(193, 237, 237);
+    width: 200px;
+    padding: 20px;
+}
+
+.heading{
+    font-size: 20px;
+    font-weight: 600;
+}
+.subjects{
+    padding: 0px 15px;
+}

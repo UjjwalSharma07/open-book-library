@@ -1,0 +1,11 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, rgba(174,202,238,1) 5%, rgba(242,233,242,1) 89%);
+}
+span{
+    font-weight: 800;
+    font-size: 20px;
+}

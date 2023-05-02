@@ -1,0 +1,9 @@
+<div>
+    <!-- <form> -->
+       <!-- <label for="searchQuery">Search:</label> -->
+       <input type="search"  id="searchQuery" [(ngModel)]="searchQuery" (change)="inputQuery(searchQuery)" name="searchQuery" placeholder="Search Books">
+       <button type="submit"  (click)="searchBooks()"  [disabled]="searchQuery.trim().length === 0"  >Search</button>
+       <!-- <button type="submit" (click)="searchBooks()" (click)="goToSubjects(searchQuery)" [disabled]="searchQuery.trim().length === 0"  >Search</button> -->
+     <!-- </form> -->
+</div>
+ 

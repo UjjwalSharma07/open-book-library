@@ -1,0 +1,85 @@
+.Trending_subjects {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: rgb(193, 237, 237);
+    width: 200px;
+    padding: 20px;
+}
+
+.heading{
+    font-size: 20px;
+    font-weight: 600;
+}
+.subjects{
+    padding: 0px 15px;
+}
+.searchBar{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: 30%;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  img{
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bffb3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 20px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #0062cc;
+  }
+  .footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .pointer{
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  .pointer:hover{
+    color: #0062cc;
+  }
+  

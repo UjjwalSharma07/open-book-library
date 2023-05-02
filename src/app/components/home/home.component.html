@@ -1,0 +1,55 @@
+
+<!-- <app-search-data (updateDataEvent)="updateData($event)"></app-search-data> -->
+
+<app-header  ></app-header>
+<!-- <h1>this is show subjects {{showSubects}}</h1> -->
+<app-search-data class="searchBar" (showPropertyData)="handleShowProperty($event)" (searchedData)="handleSearchData($event)" (loadingEvent)="handleLoading($event)" (updateDataEvent)="handleUpdateData($event)" ></app-search-data>
+
+<div *ngIf="showSubects" class="Trending_subjects">
+    <div class="heading">{{ title }}</div>
+    <div class="subjects" *ngFor="let subject of subjects" >
+        <div class="pointer" (click)="goToSubjects(subject)" >{{subject}}</div>
+    </div>
+</div>
+
+
+ <div *ngIf="loading; else elseBlock"  class="loader" style="width: 100%; height: 100%;">
+   <img src="../../../assets/gif/loading.gif" alt="">
+ 
+    
+ </div>
+
+ <ng-template #elseBlock>
+      
+    <table *ngIf="showPaginationbar">
+
+      <thead >
+        
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>First Publish Date</th>
+        </tr>
+
+      </thead>
+
+      <tbody >
+        <tr *ngFor="let book of works | paginate:{itemsPerPage:15,currentPage:pageNo}">
+          <td>{{book.title}}</td>
+          <td>{{book.author_name}}</td>
+          <td>{{book.first_publish_year}}</td>
+        </tr>
+      </tbody>
+      <div class="footer">
+        <pagination-controls  (pageChange)="pageNo = $event" ></pagination-controls>
+        <button (click)="reloadPage()">GO BACK</button>
+      </div>
+    </table>
+ </ng-template>
+ 
+
+
+
+
+
+
