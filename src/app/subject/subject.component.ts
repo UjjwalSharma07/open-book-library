@@ -33,7 +33,8 @@ export class SubjectComponent implements OnInit {
           console.log(data)
           console.log(this.subjects)
         });
-    });   
+    });
+    
   }
   goToHomePage(){
     this.router.navigate(['/']);

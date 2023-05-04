@@ -2,6 +2,7 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MyDataService } from 'src/app/services/my-data.service';
+import { query } from '@angular/animations';
 
 // import { Router } from '@angular/router';
 
@@ -19,6 +20,7 @@ export class SearchDataComponent {
   displayTrendingSubjects:boolean =true;
   searchedBooks: any = [];
   searchQuery: string = '';
+  query:String='';
 
   @Output() updateDataEvent = new EventEmitter<any>()
   @Output() loadingEvent = new EventEmitter<any>()
@@ -39,7 +41,9 @@ export class SearchDataComponent {
         this.displayTrendingSubjects = false,
          );
     console.log('searchQuery is ' + this.searchQuery)
-    const url = `http://openlibrary.org/search.json?q=${this.searchQuery}`;
+    // this.query = this.searchQuery;
+    // this.searchQuery = this.searchQuery.replace(/ /g, '_');
+    const url = `http://openlibrary.org/search.json?q=${(this.searchQuery)}/`;
     this.http.get(url).subscribe((response: any) => {
       this.searchedBooks = response.docs;
       console.log(this.searchedBooks);
